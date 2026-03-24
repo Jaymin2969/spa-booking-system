@@ -1,0 +1,224 @@
+.layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.sidebar {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.02);
+  z-index: 10;
+  animation: slideRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-logo {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-logo h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.sidebar-nav {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sidebar-nav a {
+  padding: var(--space-3) var(--space-4);
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(16, 185, 129, 0.05);
+  color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.sidebar-nav a.active {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: margin-right var(--transition-slow);
+  background: radial-gradient(circle at top right, #fdfdfd, #f3f4f6);
+}
+
+.main-content.panel-open {
+  margin-right: 400px;
+}
+
+.main-header {
+  height: auto;
+  min-height: 80px;
+  padding: 12px 32px;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  z-index: 5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.location-selector, .display-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.location-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.display-label {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.dropdown-arrow {
+  font-size: 0.6rem;
+  color: var(--color-text-light);
+}
+
+.header-center {
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  gap: 8px;
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: var(--color-text-light);
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: white;
+}
+
+.date-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.today-btn {
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.date-navigator {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  gap: 12px;
+}
+
+.nav-btn {
+  font-weight: 700;
+  padding: 4px 8px;
+}
+
+.current-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.calendar-btn {
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+.primary-btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.content-area {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}

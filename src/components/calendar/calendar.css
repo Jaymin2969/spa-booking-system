@@ -1,0 +1,206 @@
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-bg);
+}
+
+.calendar-header {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+  height: 50px;
+}
+
+.time-axis-header {
+  width: 80px;
+  min-width: 80px;
+  border-right: 1px solid var(--color-border);
+  background-color: #f9fafb;
+}
+
+.therapist-headers {
+  display: flex;
+  overflow: hidden; /* Synced with list horizontal scroll */
+  flex: 1;
+}
+
+.therapist-header-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding: var(--space-2) 0;
+  transition: var(--transition-normal);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.therapist-header-cell:hover {
+  background: rgba(16, 185, 129, 0.03);
+}
+
+.therapist-header-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.therapist-id-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.therapist-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+.therapist-icons {
+  display: flex;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.calendar-body-wrapper {
+  display: flex;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.time-axis {
+  width: 80px;
+  min-width: 80px;
+  background-color: #f9fafb;
+  border-right: 1px solid var(--color-border);
+  position: relative;
+}
+
+.time-label-container {
+  position: absolute;
+  width: 100%;
+  text-align: right;
+  padding-right: 8px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.time-label-main {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.time-label-ampm {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-top: -2px;
+}
+
+.time-label-sub {
+  font-size: 0.65rem;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.grid-bg-line {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #f3f4f6;
+  pointer-events: none;
+}
+
+.hour-line {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.therapist-column {
+  position: relative;
+  border-right: 1px solid var(--color-border);
+  height: 100%;
+  background-color: white; /* Default background */
+}
+
+.booking-card {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  border-left: 4px solid;
+  border-radius: var(--radius-md);
+  padding: 8px;
+  font-size: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: var(--transition-normal);
+  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.booking-card:hover {
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+.booking-service {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 0.75rem;
+  display: block;
+}
+
+.booking-client-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-phone {
+  font-size: 0.65rem;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.booking-client-name {
+  font-size: 0.7rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.booking-icons {
+  display: flex;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.icon-badge {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.icon-t { background-color: #10b981; }
+.icon-r { background-color: #f59e0b; }
+.icon-extra { font-size: 10px; }

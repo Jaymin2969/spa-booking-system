@@ -1,0 +1,99 @@
+.booking-form-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.outlet-info, .datetime-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.outlet-info .label, .datetime-item .label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.outlet-info .value {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.datetime-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.datetime-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.datetime-value .value {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.client-search-section {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.client-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.client-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.add-client-btn {
+  position: absolute;
+  right: 0;
+  background: white;
+  border: 1.5px solid #d1d5db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.booking-progress-block {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  background-color: #fff7ed;
+  border: 1px solid #fdba74;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9a3412;
+  z-index: 5;
+}
